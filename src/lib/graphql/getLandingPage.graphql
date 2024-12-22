@@ -1,0 +1,10 @@
+query getLandingPage($limit: Int, $preview: Boolean, $locale: String){
+  landingPageCollection(limit: $limit, preview: $preview, locale: $locale){
+    items{
+      internalNameTitle,
+      title,
+      mainImage{title, description, url}
+      isImage
+    }
+  }
+}
